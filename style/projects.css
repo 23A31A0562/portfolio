@@ -1,0 +1,259 @@
+/* PROJECTS */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 🔥 FORCE 2 PER ROW */
+    gap: 32px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card {
+    border: 1px solid #e5e7eb;
+    padding: 26px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+    border-color: #2563eb;
+}
+
+.project-card h4 {
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.project-card .tech {
+    font-size: 14px;
+    color: #2563eb;
+    margin-bottom: 12px;
+}
+
+.project-card ul {
+    padding-left: 18px;
+}
+
+.project-card ul li {
+    margin-bottom: 6px;
+    font-size: 15px;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.project-link:hover {
+    text-decoration: underline;
+}
+
+/* PROJECT ACTION BUTTONS */
+.project-actions {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: #2563eb;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #1e4fd8;
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    border: 1px solid #2563eb;
+    color: #2563eb;
+}
+
+.btn-outline:hover {
+    background: #2563eb;
+    color: #fff;
+}
+
+#projects {
+    padding: 60px 0px;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 44px;
+    font-weight: 800;
+    letter-spacing: -0.6px;
+}
+
+/* CARD */
+.project-card {
+    position: relative;
+    background: #0f172a;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    z-index: 1;
+    display: flex;              
+    flex-direction: column;   
+}
+
+.project-card:hover {
+    transform: translateY(-16px) scale(1.03);
+    box-shadow: 0 50px 90px rgba(37,99,235,0.45);
+    z-index: 10;
+}
+
+/* IMAGE */
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #020617;
+}
+
+/* CONTENT */
+.project-content {
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;   /* 🔑 THIS replaces height:100% */
+}
+
+.project-content h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #f8fafc;
+}
+
+.project-content p {
+    font-size: 14.5px;
+    color: #cbd5f5;
+    line-height: 1.5;
+    margin-bottom: 16px;
+}
+
+/* TECH STACK */
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.tech-stack span {
+    background: rgba(37,99,235,0.15);
+    color: #93c5fd;
+    padding: 6px 12px;
+    font-size: 12.5px;
+    border-radius: 999px;
+    font-weight: 500;
+}
+
+/* BUTTONS */
+.project-links {
+    display: flex;
+    gap: 12px;
+    margin-top: auto;
+}
+
+.btn {
+    padding: 8px 18px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn.primary {
+    background: #2563eb;
+    color: white;
+}
+
+.btn.primary:hover {
+    background: #1d4ed8;
+}
+
+.btn.outline {
+    border: 1px solid #2563eb;
+    color: #93c5fd;
+}
+
+.btn.outline:hover {
+    background: rgba(37,99,235,0.15);
+}
+
+/* ENTRY ANIMATION */
+.project-card {
+    opacity: 0;
+    animation: projectFade 0.6s ease forwards;
+}
+
+.project-card:nth-child(1) { animation-delay: 0.1s; }
+.project-card:nth-child(2) { animation-delay: 0.2s; }
+.project-card:nth-child(3) { animation-delay: 0.3s; }
+
+@keyframes projectFade {
+    to {
+        opacity: 1;
+    }
+}
+
+
+.tech-stack span {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    cursor: default;
+}
+
+.tech-stack span:hover {
+    transform: translateY(-4px) scale(1.08);
+    box-shadow: 0 8px 20px rgba(37,99,235,0.45);
+}
+
+.project-links .btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-links .btn:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 32px rgba(37,99,235,0.45);
+}
+
+.project-links .btn:active {
+    transform: translateY(-2px) scale(0.98);
+}
+
+/* ONLY Personal Portfolio Card Fix */
+.portfolio-card .project-links {
+    margin-top: 6px;   /* instead of auto */
+}
+
+.portfolio-card .tech-stack {
+    margin-bottom: 10px; /* tighter spacing */
+}
